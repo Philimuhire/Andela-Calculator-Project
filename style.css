@@ -82,4 +82,8 @@ body {
     background-color: #343836;
     color: #fff;
   }
+
+  button.decimal {
+    background-color: #ccc; /* Gray for Decimal Button */
+  }
   
