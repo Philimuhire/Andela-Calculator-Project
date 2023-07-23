@@ -102,4 +102,31 @@ function appendDecimal() {
     }
     updateDisplay();
   }
+
+
+  function handleKeyboardInput(event) {
+    const key = event.key.toLowerCase();
+  
+    if (/^\d$/.test(key)) {
+      appendNumber(key);
+    } else if (key === '.') {
+      appendDecimal();
+    } else if (key === '+' || key === '-' || key === '*' || key === '/') {
+      appendOperator(key);
+    } else if (key === 'enter') {
+      calculate();
+    } else if (key === 'backspace') {
+      backspace();
+    } else {
+      // Ignore other keys
+      return;
+    }
+  
+    event.preventDefault();
+  }
+  
+  // Keyboard support
+  document.addEventListener('keydown', handleKeyboardInput);
+  
+
   
