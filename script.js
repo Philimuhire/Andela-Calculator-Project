@@ -71,4 +71,12 @@ function calculate() {
     firstNumber = parseFloat(displayValue);
     updateDisplay();
   }
+
+  function clearDisplay() {
+    displayValue = '0';
+    firstNumber = '';
+    secondNumber = '';
+    selectedOperator = '';
+    updateDisplay();
+  }
   
