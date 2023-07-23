@@ -35,3 +35,28 @@ function operate(operator, a, b) {
       return "Invalid operator!";
   }
 }
+
+const displayElement = document.getElementById('display');
+let displayValue = '0';
+
+function updateDisplay() {
+  displayElement.value = displayValue;
+}
+
+function appendNumber(number) {
+  if (displayValue === '0') {
+    displayValue = number;
+  } else {
+    displayValue += number;
+  }
+  updateDisplay();
+}
+
+function appendOperator(operator) {
+  if (selectedOperator !== '') {
+    calculate();
+  }
+  firstNumber = parseFloat(displayValue);
+  selectedOperator = operator;
+  displayValue = '0';
+}
