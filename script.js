@@ -86,4 +86,20 @@ function calculate() {
     }
     return a / b;
   }
+
+  
+function appendDecimal() {
+    if (!displayValue.includes('.')) {
+      displayValue += '.';
+      updateDisplay();
+    }
+  }
+  
+  function backspace() {
+    displayValue = displayValue.slice(0, -1);
+    if (displayValue === '') {
+      displayValue = '0';
+    }
+    updateDisplay();
+  }
   
