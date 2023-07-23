@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    
+  }
+  
+  .calculator {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+  }
+  
+  #display {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  
+  button {
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button.clear {
+    background-color: #ff5252;
+  }
+  
+  /* Style for Operand Buttons (Numbers) */
+  button.operand {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Style for Operator Buttons */
+  button.operator.add {
+    background-color: #2196f3; /* Blue for Addition */
+    color: #fff;
+  }
+  
+  button.operator.subtract {
+    background-color: #a0365a; /* Pink for Subtraction */
+    color: #fff;
+  }
+  
+  button.operator.multiply {
+    background-color: #b17f35; /* Orange for Multiplication */
+    color: #fff;
+  }
+  
+  button.operator.divide {
+    background-color: #448b46; /* Green for Division */
+    color: #fff;
+  }
+  
+  button.equals {
+    grid-column: span 2;
+    background-color: #343836;
+    color: #fff;
+  }
+  
