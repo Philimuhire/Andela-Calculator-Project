@@ -60,3 +60,15 @@ function appendOperator(operator) {
   selectedOperator = operator;
   displayValue = '0';
 }
+
+function calculate() {
+    if (selectedOperator === '' || displayValue === '') {
+      return;
+    }
+    secondNumber = parseFloat(displayValue);
+    displayValue = operate(selectedOperator, firstNumber, secondNumber).toString();
+    selectedOperator = '';
+    firstNumber = parseFloat(displayValue);
+    updateDisplay();
+  }
+  
